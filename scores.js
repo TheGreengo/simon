@@ -9,23 +9,23 @@ function loadScores() {
   
     if (scores.length) {
       for (const [i, score] of scores.entries()) {
-        const position = document.createElement('td');
-        const name = document.createElement('td');
-        const score = document.createElement('td');
-        const date = document.createElement('td');
+        const positionEl = document.createElement('td');
+        const nameEl = document.createElement('td');
+        const scoreEl = document.createElement('td');
+        const dateEl = document.createElement('td');
   
-        position.textContent = i + 1;
-        name.textContent = score.name;
-        score.textContent = score.score;
-        date.textContent = score.date;
+        positionEl.textContent = i + 1;
+        nameEl.textContent = score.name;
+        scoreEl.textContent = score.score;
+        dateEl.textContent = score.date;
   
-        const row = document.createElement('tr');
-        row.appendChild(position);
-        row.appendChild(name);
-        row.appendChild(score);
-        row.appendChild(date);
+        const rowEl = document.createElement('tr');
+        rowEl.appendChild(positionEl);
+        rowEl.appendChild(nameEl);
+        rowEl.appendChild(scoreEl);
+        rowEl.appendChild(dateEl);
   
-        tableBody.appendChild(row);
+        tableBody.appendChild(rowEl);
       }
     } else {
       tableBody.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';

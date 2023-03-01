@@ -20,10 +20,10 @@ function loadScores() {
         date.textContent = score.date;
   
         const row = document.createElement('tr');
-        row.appendChild(positionTdEl);
-        row.appendChild(nameTdEl);
-        row.appendChild(scoreTdEl);
-        row.appendChild(dateTdEl);
+        row.appendChild(position);
+        row.appendChild(name);
+        row.appendChild(score);
+        row.appendChild(date);
   
         tableBody.appendChild(row);
       }
